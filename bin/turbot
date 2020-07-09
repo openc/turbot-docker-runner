@@ -1,0 +1,7 @@
+#!/bin/bash
+
+set -euo pipefail
+
+bindir="$(dirname "${BASH_SOURCE[0]}")"
+
+"${bindir}/docker-run" turbot "${@}"
