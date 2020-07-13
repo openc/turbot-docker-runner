@@ -6,5 +6,5 @@ bindir="$(dirname "${BASH_SOURCE[0]}")"
 projectdir="$(realpath -e "${bindir}/..")"
 user_id="$(id -u)"
 
-[[ -n "${NOBUILD:-}" ]] || (cd "${projectdir}" && docker build -t turbot --build-arg "user_id=${user_id}" .)
+docker inspect turbot:latest > /dev/null || (cd "${projectdir}" && docker build -t turbot --build-arg "user_id=${user_id}" .)
 docker run --rm -it -v $PWD:/app -w /app -u "${user_id}" turbot:latest "${@}"
