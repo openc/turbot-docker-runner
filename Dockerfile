@@ -6,6 +6,7 @@ RUN groupadd -g "${user_id}" user && useradd -d /home/user -m -u "${user_id}" -g
 RUN gem install rubyzip -v 1.3.0 && \
     gem install minitest -v 5.12.0 && \
     gem install nokogiri -v 1.6.8 && \
+    gem install unf_ext -v 0.0.7.7 && \
     gem install mechanize -v 2.7.4 && \
     gem install turbot -f && \
     gem install turbotlib
