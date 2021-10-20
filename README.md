@@ -27,6 +27,10 @@ e.g.
 cd my_first_bot
 <path-to-turbot-docker-runner>/bin/turbot bots:validate
 ```
+
+![Usage animation](https://user-images.githubusercontent.com/63836/138076990-bd84dfd6-93b8-473f-8620-87d4e6edd21c.gif)
+
+
 ### `docker-run` ###
 
 This lets you run any command in the Docker container used by Turbot. It will also transparently build the Docker image for you.
